@@ -43,7 +43,7 @@ public class Block {
     }
 
     public int randomY(){
-        return (int)(Math.random()*(Gdx.graphics.getWidth()-150)+150);
+        return (int)(Math.random()*(Gdx.graphics.getWidth()-350)+175);
     }
 
 
