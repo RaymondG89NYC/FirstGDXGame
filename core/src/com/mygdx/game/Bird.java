@@ -33,12 +33,14 @@ public class Bird {
     public int getY(){
         return y;
     }
+    public double getVelocity(){return velocity;}
+    public double getAcceleration(){return acceleration;}
 
-
+    public void setAcceleration(double x){acceleration = x;}
 
     public void update(){
         velocity += acceleration;
-        y += velocity;
+//        y += velocity;
         count ++;
         if(count > 4){
             count = 0;
@@ -60,6 +62,13 @@ public class Bird {
     public void draw(SpriteBatch batch){
         sprite.setPosition(x, y);
         sprite.draw(batch);
+        if(velocity>4){
+            sprite.setRotation(5*4);
+        }
+        else {
+            sprite.setRotation(5 * (int) velocity);
+        }
+//        sprite.rotate(10*(int)velocity);
     }
 
 }
